@@ -24,7 +24,15 @@ The way this application works is that when a functional Express.js API is given
 
 Open Insomnia, and use the GET, PUT, POST and DELETE requests in formatted JSON.
 
+## Screenshot
+
+![Image](./Image/Screenshot%202023-03-03%20at%2017.03.20.png)
+
 
 ## Video Demonstration 
 
-Here is the video link: 
+Here is the video link on how to create the schema, seed the database and start the applications server. [Video](https://drive.google.com/file/d/1Z4f9_vNCpn79zjnInPsn4N4Lg1_FgjBg/view?usp=sharing)
+
+Link to GET, POST, PUT and DELETE routes [Video](https://drive.google.com/file/d/1xfqZvn_klurWx4J_nu_np9ktvhdXoqko/view?usp=sharing)
+
+
