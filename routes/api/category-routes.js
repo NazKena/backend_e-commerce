@@ -3,10 +3,11 @@ const { Category, Product } = require('../../models');
 
 // The `/api/categories` endpoint
 
-router.get('/:id', async (req, res) => {
+router.get('/', async (req, res) => {
   // find all categories
+    // be sure to include its associated Products
   try {
-    const result = await Category.findByPk(req.params.id)
+    const result = await Category.findAll()
     if (!result) {
       res.status(404).end()
     } else {
@@ -16,37 +17,53 @@ router.get('/:id', async (req, res) => {
     res.status(500).end()
   }
 })
-  // be sure to include its associated Products
 
-  Category.findAll({ include:[Product]
-  })
-
-router.get('/:id', (req, res) => {
+router.get('/:id', async(req, res) => {
   // find one category by its `id` value
   // be sure to include its associated Products
-});
-
-router.post('/', async (req, res) => {
-  // create a new category
- try {
-  await Category.create(req.body)
-  res.status(204).end()
-} catch (err) {
-  res.status(500).end()
-}
+  try {
+    const results = await Category.findByPk(req.params.id)
+    res.json(results)
+  } catch (err) {
+    console.log(err)
+    res.status(500).end()
+  }
 })
 
-router.put('/:id', (req, res) => {
+router.post("/", async (req, res) => {
+  try {
+    const categoryData = await Category.create({
+      category_name: req.body.category_name,
+    });
+    res.status(200).json(categoryData);
+  } catch (error) {
+    console.log(error.message);
+    res.status(500).json(error);
+  }
+});
+
+router.put('/:id', async (req, res) => {
   // update a category by its `id` value
-  
-});
-
-router.delete('/:id', (req, res) => {
-  // delete a category by its `id` value
-
-Category.delete ({
-
+  try {
+    await Category.update(req.body)
+    res.status(204).end()
+  } catch (err) {
+    res.status(500).end()
+  }
 })
-});
+
+router.delete('/:id',async (req, res) => {
+  // delete a category by its `id` value
+  const result = await Category.destroy({
+    where: {
+      id: req.params.id
+    }
+  })
+  if (result === 0) {
+    res.status(404).end()
+  } else {
+    res.status(204).end()
+  }
+})
 
 module.exports = router;
