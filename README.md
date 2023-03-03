@@ -33,6 +33,6 @@ Open Insomnia, and use the GET, PUT, POST and DELETE requests in formatted JSON.
 
 Here is the video link on how to create the schema, seed the database and start the applications server. [Video](https://drive.google.com/file/d/1Z4f9_vNCpn79zjnInPsn4N4Lg1_FgjBg/view?usp=sharing)
 
-Link to GET, POST, PUT and DELETE routes [Video](https://drive.google.com/file/d/1xfqZvn_klurWx4J_nu_np9ktvhdXoqko/view?usp=sharing)
+Link to GET, POST, PUT and DELETE routes on Insomnia [Video](https://drive.google.com/file/d/1xfqZvn_klurWx4J_nu_np9ktvhdXoqko/view?usp=sharing)
 
 
