@@ -13,12 +13,16 @@ The way this application works is that when a functional Express.js API is given
 
 ## Installation
 
-`run npm run` seed to seed data to your database so that you can test your routes.
+1. `run npm run` seed to seed data to your database so that you can test your routes.
 
-`nodemon erver.js` was used to sync the Sequalise models to the sql database.
+2. `nodemon erver.js` was used to sync the Sequalise models to the sql database.
 
 
 ## Usage 
+
+1. Open Insomnia, and use the GET, PUT, POST and DELETE requests. 
+
+2. 
 
 ## Video Demonstration 
 
